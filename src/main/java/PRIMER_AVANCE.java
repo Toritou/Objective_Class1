@@ -78,5 +78,40 @@ public class PRIMER_AVANCE {
             this.observaciones = observaciones;
         }
 
+        //--- Metodo para mostrar los datos del paciente ---//
+        public void mostrarDatos() {
+            System.out.println("Nombre: " + nombre);
+            System.out.println("Apellido: " + apellido);
+            System.out.println("RUT: " + rut);
+            System.out.println("Telefono: " + telefono);
+            System.out.println("Direccion: " + direccion);
+            System.out.println("Correo: " + correo);
+            System.out.println("Fecha de nacimiento: " + fechaNacimiento);
+            System.out.println("Genero: " + genero);
+            System.out.println("Estado civil: " + estadoCivil);
+            System.out.println("Ocupacion: " + ocupacion);
+            System.out.println("Seguro: " + seguro);
+            System.out.println("Tipo de sangre: " + tipoSangre);
+            System.out.println("Alergias: " + alergias);
+            System.out.println("Enfermedades cronicas: " + enfermedadesCronicas);
+            System.out.println("Medicamentos: " + medicamentos);
+            System.out.println("Observaciones: " + observaciones);
+        }
+
+        //--- Metodo para obtener el RUT del paciente ---//
+        public String getRut() {
+            return rut;
+        }
     }
+
+    //--- Metodo main ---//
+    public static void main(String[] args) {
+        mostrarMenu();
+    }
+
+    //--- menu ---//
+    public static void mostrarMenu() {
+        Scanner scanner = new Scanner(System.in);
+        boolean opcionValida = false;
+
 }
