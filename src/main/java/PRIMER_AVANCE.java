@@ -114,4 +114,34 @@ public class PRIMER_AVANCE {
         Scanner scanner = new Scanner(System.in);
         boolean opcionValida = false;
 
+        do {
+            try {
+                System.out.println("----- Consulta Medica -----");
+                System.out.println("1. Buscar paciente");
+                System.out.println("0. Salir");
+                System.out.println("Ingrese su opcion:");
+
+                int opcion = scanner.nextInt();
+
+                switch (opcion) {
+                    case 1:
+                        buscarPaciente();
+                        opcionValida = true;
+                        break;
+                    case 0:
+                        System.out.println("Saliendo del programa.");
+                        opcionValida = true;
+                        break;
+                    default:
+                        System.out.println("Opcion no existe.");
+                        break;
+                }
+            } catch (Exception e) {
+                System.out.println("seleccione una opcion valida.");
+                scanner.nextLine();
+            }
+        } while (!opcionValida);
+
+        scanner.close();
+    }
 }
